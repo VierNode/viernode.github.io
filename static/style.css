@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+}
+.logo {
+  width: 30vh;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.login-btn {
+  color: #99ff00;
+  margin-right: 10px;
+  border: 2px solid #99ff00;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 20px;
+  height: 40px;
+  transition: 0.5s;
+}
+.login-btn:hover {
+  color: white;
+  background-color: #99ff00;
+}
+.signup-btn {
+  color: white;
+  width: 80px;
+  height: 40px;
+  background-color: #99ff00;
+  border-radius: 20px;
+  border: 2px solid #99ff00;
+  transition: 0.5s;
+}
+.signup-btn:hover {
+  color: #99ff00;
+  border: 2px solid #99ff00;
+  background-color: transparent;
+}
+.navlinks {
+  width: 100px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+.navlinks:hover {
+  background-color: #99ff00;
+  color: white;
+}
+
+/* ++++++++++++++++++++++++++++ hero image +++++++++++++++++++++++++++++ */
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/img2.jpeg");
+
+  /* Set a specific height */
+  height: 80%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.heading-1 {
+  width: 9.25em;
+  height: 1.15em;
+  font-size: 4rem;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.heading-1 div {
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.upper {
+  top: 0;
+  height: 52.5%;
+  color: #99ff00;
+  overflow: hidden;
+  z-index: 3;
+  animation: moveUp 2s infinite;
+  background-color: black;
+}
+
+.lower {
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 52.5%, white 52.5%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 1;
+  animation: moveDown 2s infinite;
+}
+
+.inside {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  text-align: center;
+  z-index: 2;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes moveUp {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50%,
+  70% {
+    top: -45px;
+  }
+}
+
+@keyframes moveDown {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50%,
+  70% {
+    top: 30px;
+  }
+}
+
+@media (max-width: 424px) {
+  .container {
+    font-size: 2.5rem;
+  }
+
+  .inside {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    font-size: 2rem;
+  }
+
+  .inside {
+    font-size: 0.5rem;
+  }
+}
+.services .view-more-btn {
+  background-color: #99ff00;
+}
+.feature-title {
+  color: #99ff00;
+}
+.home-jumbortron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/static/images/img1.jpeg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .home-jumbortron {
+    display: none;
+  }
+}

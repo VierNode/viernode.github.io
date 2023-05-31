@@ -1,0 +1,49 @@
+.pricing-jumbotron{
+  margin-top: 55px;
+  border: 1px solid black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+  
+}
+.pricing-jumbotron h1{
+  color: white;
+  font-weight: bold;
+  margin: 50px;
+
+}
+.collapsible {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px solid #99ff00;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #99ff00;
+  color: #181818;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #181818;
+  color: white;
+}
+.book_now{
+  color: white;
+  text-decoration: none;
+}

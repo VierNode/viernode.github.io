@@ -1,0 +1,424 @@
+{% extends 'base.html' %} {% block content %}
+<!-- +++++++++++++++++++++++++++++++++ pricing style +++++++++++++++++++++++++++++++++++++++++++++ -->
+<style>
+  .pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #303030;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .pricing {
+    width: 280px;
+    padding: 20px;
+    border: 1px solid rgb(153, 255, 0);
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: 0.5s;
+  }
+
+  .pricing:hover {
+    box-shadow: 0 4px 4px rgb(153, 255, 0);
+  }
+
+  .pricing h2 {
+    font-size: 24px;
+    color: #99ff00;
+  }
+
+  .pricing .price {
+    font-size: 36px;
+    color: #99ff00;
+    margin-bottom: 20px;
+  }
+
+  .pricing ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .pricing ul li {
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: #99ff00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #99ff00;
+  }
+
+  @media (min-width: 576px) {
+    .pricing {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .pricing {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .pricing {
+      width: 600px;
+    }
+
+    @media (min-width: 1000px) {
+      .pricing {
+        width: 300px;
+      }
+    }
+  }
+</style>
+<!-- +++++++++++++++++++++++++++++++++++++++++++       hero image       ++++++++++++++++++++++++++++++++++++ -->
+
+<div class="hero-image">
+  <div class="hero-text">
+    <div class="heading-1">
+      <div class="upper">Co Work Space</div>
+      <div class="lower">Co Work Space</div>
+      <div class="inside">Vier Node</div>
+    </div>
+  </div>
+</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++      about area        +++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="row featurette" style="padding-top: 30px; margin: 0">
+  <div class="col-md-7" style="padding-top: 50px">
+    <h2 class="">
+      Discover a New Way to Work
+
+    </h2>
+    <p class="lead">
+      At Vier Node, we believe in embracing the future of work. Gone are the days of traditional office
+      setups. We provide a dynamic and collaborative environment that unleashes your productivity and sparks innovation.
+      Join our vibrant community of professionals and experience the power of working alongside like-minded individuals
+      who share your passion for success.
+    </p>
+  </div>
+  <div class="col-md-5">
+    <img src="/static/images/img3.jpg" alt="" style="height: 60vh" />
+  </div>
+</div>
+<hr class="featurette-divider" />
+
+<div class="row featurette" style="margin: 0">
+  <div class="col-md-7 order-md-2" style="padding-top: 50px">
+    <h2 class="">
+      Services and Benefits
+    </h2>
+    <p class="lead">
+      We go the extra mile to provide a comprehensive range of services and benefits to enhance your coworking
+      experience. From reception and mail handling services to on-site support staff, we're here to assist you every
+      step of the way. Take advantage of our networking events and community-building activities to forge connections
+      and expand your professional network. Plus, enjoy exclusive partner discounts, complimentary coffee, snacks, and
+      refreshments, as well as convenient printing, scanning, and copying facilities.
+    </p>
+  </div>
+  <div class="col-md-5 order-md-1">
+    <div class="col-md-5">
+      <img src="/static/images/img14.jpg" alt="" style="height: 60vh" />
+    </div>
+  </div>
+</div>
+
+<hr class="featurette-divider" />
+
+<div class="row featurette" style="margin: 0">
+  <div class="col-md-7" style="padding-top: 50px">
+    <h2 class="">
+      Membership Plans Tailored for You
+    </h2>
+    <p class="lead">
+      Finding the perfect membership plan is a breeze at Vier Node. Choose from our flexible options that fit
+      your working style and budget. Whether you prefer pay-as-you-go or monthly subscriptions, we have a plan that
+      suits you. As a member, you'll enjoy access to all our amenities and services, along with networking opportunities
+      to connect with professionals from various industries. Join our thriving community and unlock new possibilities
+      for growth and collaboration.
+    </p>
+  </div>
+  <div class="col-md-5">
+    <img src="/static/images/img15.jpg" alt="" style="height: 60vh" />
+  </div>
+</div>
+<hr class="featurette-divider" />
+
+<!-- +++++++++++++++++++++++++++++++++++++++++          Pricing section            ++++++++++++++++++++++++++++++++++++++ -->
+<div class="pricing-container">
+  <div class="pricing">
+    <center>
+      <h2>Pay Per Month</h2>
+      <h2>24HR</h2>
+    </center>
+    <br />
+    <ul>
+      <li>Dedicated Seat</li>
+      <li>Dedicated Seat with Locker</li>
+      <li>Dedicated Desk with Locker</li>
+      <li>Included All Facilities</li>
+    </ul>
+    <br />
+    <center>
+      <button class="btn" onclick="window.location.href='pricing'">
+        Read More & Book
+      </button>
+    </center>
+  </div>
+  <div class="pricing">
+    <center>
+      <h2>Pay Per Month</h2>
+      <h2>8HR Slot</h2>
+    </center>
+    <br />
+    <ul>
+      <li>Dedicated Seat</li>
+      <li>Dedicated Seat with Locker</li>
+      <li>Dedicated Desk with Locker</li>
+      <li>Included All Facilities</li>
+    </ul>
+    <br />
+    <center>
+      <button class="btn" onclick="window.location.href='pricing'">
+        Read More & Book
+      </button>
+    </center>
+  </div>
+  <div class="pricing">
+    <center>
+      <h2>Pay Per Week</h2>
+      <h2>24HR (Flexible Timing)</h2>
+    </center>
+    <br />
+    <p style="color: white; line-height: 32px">
+      You will be given 24 hours of working time limit for a week. In That
+      package you can flexibly chose your time.
+    </p>
+    <br />
+    <center>
+      <button class="btn" onclick="window.location.href='pricing'">
+        Read More & Book
+      </button>
+    </center>
+  </div>
+  <div class="pricing">
+    <center>
+      <h2>Virtual Office</h2>
+      <h2>(Comming Soon)</h2>
+    </center>
+    <br />
+    <p style="color: white; line-height: 32px">
+      In this package you will be given Private Offices and Cabins. This Package underconstruced will comme soon.
+    </p>
+    <br />
+    <center>
+      <button class="btn" onclick="window.location.href='pricing'">
+        Read More & Book
+      </button>
+    </center>
+  </div>
+</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++          prime location            ++++++++++++++++++++++++++++++++++++++ -->
+<div class="home-jumbortron">
+  <div class="container" style="
+      color: whitesmoke;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    ">
+    <div class="row" style="text-align: center">
+      <div class="col">
+        <h1 style="color: #99ff00; font-size: 80px">02</h1>
+        <h5>Prime Location</h5>
+      </div>
+      <div class="col">
+        <h1 style="color: #99ff00; font-size: 80px">LAHORE</h1>
+        <h5>Main City</h5>
+      </div>
+      <div class="col">
+        <h1 style="color: #99ff00; font-size: 80px">40+</h1>
+        <h5>Seating Capacity</h5>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 30px; text-align: center">
+      <div class="col">
+        <h1 style="color: #99ff00; font-size: 80px">01</h1>
+        <h5>Years of Operations</h5>
+      </div>
+      <div class="col">
+        <h1 style="color: #99ff00; font-size: 80px">50+</h1>
+        <h5>Organizations</h5>
+      </div>
+      <div class="col">
+        <h1 style="color: #99ff00; font-size: 80px">1,000+</h1>
+        <h5>Area Covered Sq.ft.</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="b-example-divider"></div>
+
+<!-- ++++++++++++++++++++++++++++++    Services    ++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="container-fluid px-4 py-5," style="background-color: #303030">
+  <h2 class="pb-2 border-bottom" style="color: white; padding-top: 20px">
+    Our Core Services
+  </h2>
+
+  <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="col d-flex flex-column align-items-start gap-2">
+      <h3 class="fw-bold" style="color: #99ff00">Amenities & Features</h3>
+      <p class="text-body-secondary" style="color: white">
+        With Vier Node, you'll enjoy a range of exceptional features designed to enhance your work experience.
+        Our flexible workspace options cater to your specific needs, whether you're a freelancer, startup, or an
+        established enterprise. Our state-of-the-art amenities ensure your utmost comfort, while high-speed internet and
+        top-notch tech infrastructure support your business operations. Step into our modern and stylishly designed
+        space, complete with dedicated meeting rooms and private offices. And when you need a break, our comfortable
+        breakout areas offer the perfect retreat for relaxation and rejuvenation.
+      </p>
+      <button class="view-more-btn" style="
+          background-color: #99ff00;
+          width: 100px;
+          height: 40px;
+          border: 2px solid #99ff00;
+          border-radius: 40px;
+          color: white;
+          margin-top: 20px;
+        ">
+        View More
+      </button>
+    </div>
+
+    <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="col d-flex flex-column gap-2" style="
+            border: 2px solid #99ff00;
+            border-radius: 20px;
+            width: 160px;
+            margin: 10px;
+            padding-top: 10px;
+          ">
+          <i class="fa-solid fa-globe" style="font-size: 30px; color: #99ff00"></i>
+          <p class="feature-title">High Speed Internet</p>
+        </div>
+
+        <div class="col d-flex flex-column gap-2" style="
+            border: 2px solid #99ff00;
+            border-radius: 20px;
+            width: 160px;
+            margin: 10px;
+            padding-top: 10px;
+          ">
+          <i class="fa-solid fa-leaf" style="font-size: 30px; color: #99ff00"></i>
+          <p class="feature-title">Comfortable Enviroment</p>
+        </div>
+        <div class="col d-flex flex-column gap-2" style="
+            border: 2px solid #99ff00;
+            border-radius: 20px;
+            width: 160px;
+            margin: 10px;
+            padding-top: 10px;
+          ">
+          <i class="fa-solid fa-lock" style="font-size: 30px; color: #99ff00"></i>
+          <p class="feature-title">Personal Locker</p>
+        </div>
+        <div class="col d-flex flex-column gap-2" style="
+            border: 2px solid #99ff00;
+            border-radius: 20px;
+            width: 160px;
+            margin: 10px;
+            padding-top: 10px;
+          ">
+          <i class="fa-solid fa-handshake" style="font-size: 30px; color: #99ff00"></i>
+          <p class="feature-title">Private Meeting Room</p>
+        </div>
+        <div class="col d-flex flex-column gap-2" style="
+            border: 2px solid #99ff00;
+            border-radius: 20px;
+            width: 160px;
+            margin: 10px;
+            padding-top: 10px;
+          ">
+          <i class="fas fa-regular fa-shield-halved" style="font-size: 30px; color: #99ff00"></i>
+          <p class="feature-title">24Hrs Secuirty Gaurd</p>
+        </div>
+        <div class="col d-flex flex-column gap-2" style="
+            border: 2px solid #99ff00;
+            border-radius: 20px;
+            width: 160px;
+            margin: 10px;
+            padding-top: 10px;
+          ">
+          <i class="fa-solid fa-user" style="font-size: 30px; color: #99ff00"></i>
+          <p class="feature-title">Office Boy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++        form area           ++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
+        Join Our Thriving Community
+      </h1>
+      <p class="col-lg-10 fs-4">
+        Be part of a vibrant community that fosters collaboration, learning, and growth. Connect with professionals from
+        various industries, share ideas, and explore new opportunities. Attend our workshops, webinars, and skill
+        development programs to expand your knowledge and stay ahead of the curve. Join special interest groups and
+        clubs to connect with like-minded individuals and dive deeper into your passions. Showcase your work and gain
+        exposure within our supportive community.
+      </p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form method="POST" class="p-4 p-md-5 border rounded-5 bg-body-tertiary" style="
+          background-color: #181818;
+          border-radius: 15px;
+          box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+        ">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+          <input type="name" class="form-control" id="name" placeholder="Name" name="name" required />
+          <label for="floatingInput">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required />
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="number" placeholder="Contact Number" name="number" required />
+          <label for="floatingPassword">Contact Number</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="textarea" class="form-control" id="message" placeholder="Message" name="message" required />
+          <label for="floatingInput">Additional Message</label>
+        </div>
+        <hr class="my-4" />
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

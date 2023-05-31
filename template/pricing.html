@@ -1,0 +1,329 @@
+{% extends 'base.html' %} {% block pricing %}
+
+<div class="jumbotron pricing-jumbotron"
+    style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/static/images/img4.jpg);height: 350px;">
+    <div class="container">
+        <center>
+            <h1 class="display-3">Pricing & <span style="color: #99ff00;"> Packages</span></h1>
+            <h5 style="color: white;">If you’re interested in to your spot at Vier Node, select package and send your
+                query. Our Team will
+                contact you for further information</h5>
+        </center>
+    </div>
+</div>
+
+
+<div class="container-fluid col-xl-10 col-xxl-5 px-4 py-5" style="background-color: #303030; width: 100%;">
+    <div class="row align-items-center g-lg-5 py-5">
+
+        <div class="col-lg-7 text-center text-lg-start">
+            <h3 style="color: white;">Step 1:</h3>
+            <h4 style="color: #99ff00;">Select Your Package</h4>
+            <button type="button" class="collapsible">Pay Per Month 24 Hrs Time Slot Per Day<i class="fa-solid fa-plus"
+                    style="float: right"></i></button>
+            <div class="content" style="padding-top: 20px;">
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <div class="col">
+                            <h5 style="color: #99ff00;">Dedicated Seat</h5>
+                            <p>Will Booked for 24 Hrs slot time without locker</p>
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">Unlimited Tea</p>
+                            </div>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <h5 style="color: #99ff00; padding-top: 20px;">Rs 17,000/- only</h5>
+                            <button class="signup-btn" style="width: 100px; margin-top: 25px;"
+                                onclick="Dedicated_Seat()">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function Dedicated_Seat() {
+                        document.getElementById("dedicated_seat_name").value = "Dedicated Seat 24 HRS Time Slot";
+                        document.getElementById("dedicated_seat_amount").value = "17000";
+                    }
+                </script>
+                <hr class="featurette-divider" />
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <div class="col">
+                            <h5 style="color: #99ff00;">Dedicated Seat With Locker</h5>
+                            <p>Will Booked for 24 Hrs slot time with Locker</p>
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">Unlimited Tea</p>
+                            </div>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <h5 style="color: #99ff00; padding-top: 20px;">Rs 18,000/- only</h5>
+                            <button class="signup-btn" style="width: 100px; margin-top: 25px;"
+                                onclick="Dedicated_Seat_with_locker()">Select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="featurette-divider" />
+                <script>
+                    function Dedicated_Seat_with_locker() {
+                        document.getElementById("dedicated_seat_name").value = "Dedicated Seat 24 HRS Time Slot with Locker";
+                        document.getElementById("dedicated_seat_amount").value = "18000";
+                    }
+                </script>
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <div class="col">
+                            <h5 style="color: #99ff00;">Dedicated Desk With Locker</h5>
+                            <p>Will Booked for 24 Hrs slot time with locker</p>
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">Unlimited Tea</p>
+                            </div>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <h5 style="color: #99ff00; padding-top: 20px;">Rs 20,000/- only</h5>
+                            <button class="signup-btn" style="width: 100px; margin-top: 25px;"
+                                onclick="Dedicated_Desk_with_locker()">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function Dedicated_Desk_with_locker() {
+                        document.getElementById("dedicated_seat_name").value = "Dedicated Desk 24 HRS Time Slot with Locker";
+                        document.getElementById("dedicated_seat_amount").value = "20000";
+                    }
+                </script>
+
+                <!-- +++++++++++++++++++++++++++++++++++++++first section end++++++++++++++++++++++++++++++++++++++ -->
+
+            </div>
+            <button type="button" class="collapsible" style="margin-top: 10px;">Pay Per Month 08 Hrs Time Slot Per
+                Day<i class="fa-solid fa-plus" style="float: right"></i></button>
+            <div class="content" style="padding-top: 20px;">
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <div class="col">
+                            <h5 style="color: #99ff00;">Dedicated Seat</h5>
+                            <p>08 Hours Time Slot</p>
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">01 Cup of Tea</p>
+                            </div>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <h5 style="color: #99ff00; ">Rs 8,500/- only</h5>
+                            <button class="signup-btn" style="width: 100px; margin-top: 25px;"
+                                onclick="Dedicated_Seat_08Hours()">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function Dedicated_Seat_08Hours() {
+                        document.getElementById("dedicated_seat_name").value = "Dedicated Seat 08 HRS Time Slot";
+                        document.getElementById("dedicated_seat_amount").value = "8500";
+                    }
+                </script>
+                <hr class="featurette-divider" />
+
+
+
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <div class="col">
+                            <h5 style="color: #99ff00;">Dedicated Seat with Locker</h5>
+                            <p>08 Hours Time Slot</p>
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">01 Cup of Tea</p>
+                            </div>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <h5 style="color: #99ff00; ">Rs 9,000/- only</h5>
+                            <button class="signup-btn" style="width: 100px; margin-top: 25px;"
+                                onclick="Dedicated_Seat_08Hours_with_Locker()">Select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function Dedicated_Seat_08Hours_with_Locker() {
+                        document.getElementById("dedicated_seat_name").value = "Dedicated Seat 08 HRS Time Slot with Locker";
+                        document.getElementById("dedicated_seat_amount").value = "9000";
+                    }
+                </script>
+                <hr class="featurette-divider" />
+
+
+
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <div class="col">
+                            <h5 style="color: #99ff00;">Dedicated Desk with Locker</h5>
+                            <p>08 Hours Time Slot</p>
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">01 Cup of Tea</p>
+                            </div>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <h5 style="color: #99ff00; ">Rs 10,000/- only</h5>
+                            <button class="signup-btn" style="width: 100px; margin-top: 25px;"
+                                onclick="Dedicated_Desk_08Hours_with_Locker()">Select</button>
+                        </div>
+                    </div>
+                    <script>
+                        function Dedicated_Desk_08Hours_with_Locker() {
+                            document.getElementById("dedicated_seat_name").value = "Dedicated Desk 08 HRS Time Slot with Locker";
+                            document.getElementById("dedicated_seat_amount").value = "10000";
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <!-- ++++++++++++++++++++++++++  second section end +++++++++++++++++++++++++++ -->
+
+
+            <button type="button" class="collapsible" style="margin-top: 10px;">Pay Per Week
+                24HR (Flexible Timing)<i class="fa-solid fa-plus" style="float: right"></i></button>
+            <div class="content">
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+                        <p>You will be given 24 hour of working time limit for a week. In this package you can flexibly
+                            chose your own working time. Your package credit hours will be calculated by biometric
+                            checkin and check-out system. You can recharge your package when 24 hours of working time
+                            limit is finished</p>
+                        <hr class="featurette-divider" />
+                        <div class="col">
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">Without Cup of Tea</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5 style="color: #99ff00; ">Rs 80/- only Per Hour </h5>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <button class="signup-btn" style="width: 100px; "
+                                onclick="Flexible_timing_witout_Tea()">Select</button>
+                        </div>
+                    </div>
+                    <script>
+                        function Flexible_timing_witout_Tea() {
+                            document.getElementById("dedicated_seat_name").value = "Flexible Timing Witout Tea";
+                            document.getElementById("dedicated_seat_amount").value = "80";
+                        }
+                    </script>
+                    <hr class="featurette-divider" />
+                </div>
+                <div class="container">
+                    <div class="row align-items-start" style=" padding: 10px;">
+
+                        <div class="col">
+                            <div style="color: #99ff00;">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <p style="display: inline;">With Cup of Tea</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5 style="color: #99ff00; ">Rs 100/- only Per Hour </h5>
+                        </div>
+                        <div class="col" style="text-align: right; ">
+                            <button class="signup-btn" style="width: 100px; " onclick="Flexible_timing_with_Tea()">Book
+                                Now</button>
+                        </div>
+                    </div>
+                    <script>
+                        function Flexible_timing_with_Tea() {
+                            document.getElementById("dedicated_seat_name").value = "Flexible Timing With Tea";
+                            document.getElementById("dedicated_seat_amount").value = "100";
+                        }
+                    </script>
+                    <hr class="featurette-divider" />
+                </div>
+            </div>
+            <button type="button" class="collapsible" style="margin-top: 10px">Vitrual Offices<i
+                    class="fa-solid fa-plus" style="float: right"></i></button>
+            <div class="content">
+                <h5 style="color: red;">Comming Soon...!</h5>
+            </div>
+
+
+        </div>
+
+
+        <!-- +++++++++++++++++++++++++++++++++++++++++form start++++++++++++++++++++++++++++++++++ -->
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 bg-body-tertiary" style="background-color: #181818; margin-top: 20px;"
+                method="POST">
+                {% csrf_token %}
+                {% if messages %}
+                <div class="alert alert-primary" role="alert">
+                    {% for message in messages %}
+                    {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <h3 style="color: white;">Step 2:</h3>
+                <h4 style="color: #99ff00;">Enter Your Details</h4>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="dedicated_seat_name" name="package_name" required
+                        value="Selected Package">
+                    <label for="floatingInput">Selected Package</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="dedicated_seat_amount" name="package_amount" required
+                        value="0.00">
+                    <label for="floatingInput">Package Amount</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name" required>
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        name="email" required>
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="Contact Number"
+                        name="number" required>
+                    <label for="floatingInput">Contact Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <label for="floatingInput">Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="Confirm Password" name="confirm_password" required>
+                    <label for="floatingInput">Confirm Password</label>
+                </div>
+                <br>
+                <center><button class="submit"
+                        style="background-color: #99ff00; padding: 10px; border: none; border-radius: 20px; color: white;">Pay
+                        Now</button>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+{% endblock pricing %}

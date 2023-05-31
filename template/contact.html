@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block contact %}
+
+<div class="jumbotron pricing-jumbotron"
+    style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/static/images/img4.jpg);height: 350px;">
+    <div class="container">
+        <center>
+            <h1 class="display-3">Get in & <span style="color: #99ff00;"> Touch</span></h1>
+            <p style="color: white;"> Ready to experience the future of work? Book a tour of [Cowork Space Name] and
+                discover how our coworking
+                space can elevate your business. Get in touch with our friendly staff to address any inquiries or
+                concerns.
+                You can find our contact information, including our address, phone number, and email, on our website.
+                Don't
+                forget to follow us on social</p>
+        </center>
+    </div>
+</div>
+
+<!-- +++++++++++++++++++++++++++++++++formarea+++++++++++++++++++++++++++++++++++++ -->
+
+
+<div class="container-fluid col-xl-10 col-xxl-5 px-4 py-5" style="background-color: #303030; width: 100%;">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.999620520013!2d74.37851097420035!3d31.57905827418713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b599d890cf9%3A0x7fed769a10373339!2sShalamar%20Square!5e0!3m2!1sen!2s!4v1685023724052!5m2!1sen!2s"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <!-- +++++++++++++++++++++++++++++++++++++++++form start++++++++++++++++++++++++++++++++++ -->
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 bg-body-tertiary" style="background-color: #181818; margin-top: 20px;"
+                method="POST">
+
+                {% csrf_token %}
+                <h1 style="color: #99ff00; margin-bottom: 20px;">Contact Us</h1>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name">
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        name="email">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="Contact Number"
+                        name="number">
+                    <label for="floatingInput">Contact Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="message" id="message" class="form-control" name="message"></textarea>
+                    <label for="floatingInput">Type message</label>
+                </div>
+                <br>
+                <center><button class="submit"
+                        style="background-color: #99ff00; padding: 10px; border: none; border-radius: 20px; color: white;">Send
+                        Message</button></center>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- +++++++++++++++++++++++++++++++++++ contact details +++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<div class="container-fluid" style="background-color: #303030; ">
+    <div class="row">
+        <div class="col" style="border-right: 1px solid #99ff00;margin-bottom: 100px;">
+            <center>
+                <i class="fa-solid fa-phone" style="font-size: 40px; color: #99ff00;"></i><br><br>
+                <p style="font-size: 20px; color: white;">042-36821919</p>
+            </center>
+        </div>
+        <div class="col" style="border-right: 1px solid #99ff00;margin-bottom: 100px;">
+            <center>
+                <i class=" fa-brands fa-whatsapp" style="font-size: 40px; color: #99ff00;"></i><br><br>
+                <p style="font-size: 20px; color: white;">+92 322 2240009</p>
+            </center>
+        </div>
+        <div class="col" style="border-right: 1px solid #99ff00;margin-bottom: 100px;">
+            <center>
+                <i class="fa-solid fa-envelope" style="font-size: 40px; color: #99ff00;"></i><br><br>
+                <p style="font-size: 20px; color: white;">viernodecospace@gmail.com</p>
+            </center>
+        </div>
+        <div class="col">
+            <center>
+                <i class="fa-solid fa-location-dot" style="font-size: 40px; color: #99ff00;"></i><br><br>
+                <p style="font-size: 20px; color: white;">Ground Floor, Shalimar Square, Shalimar Link Road, Lahore
+                </p>
+            </center>
+        </div>
+    </div>
+</div>
+
+
+{% endblock contact %}

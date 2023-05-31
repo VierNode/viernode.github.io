@@ -1,0 +1,174 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static '/style.css' %}">
+  <link rel="stylesheet" href="{% static '/pricing.css' %}">
+  <link rel="stylesheet" href="{% static '/about.css' %}">
+  <link rel="stylesheet" href="{% static '/contact.css' %}">
+  <link rel="stylesheet" href="{% static '/gallery.css' %}">
+  <link rel="stylesheet" href="{% static '/loginstyle.css' %}">
+  
+  
+  <title>Vier Node|Co-Work Space</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href={% url 'home' %}><img src="/static/images/logo.png" class="logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item, navlinks">
+            <a class="nav-link" href={% url 'home' %}>Home</a>
+          </li>
+          <li class="nav-item, navlinks">
+            <a class="nav-link" href={% url 'pricing' %}>Pricing</a>
+          </li>
+          <li class="nav-item, navlinks">
+            <a class="nav-link" href={% url 'gallery' %}>Gallery</a>
+          </li>
+          <li class="nav-item, navlinks">
+            <a class="nav-link" href={% url 'about' %}>About</a>
+          </li>
+          <li class="nav-item, navlinks">
+            <a class="nav-link" href={% url 'contact' %}>Contact</a>
+          </li>
+        </ul>
+        <a href={% url 'login' %}><button class="navbar-text, login-btn" style="width: 100px;">Client Login</button></a>
+
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+  {% block content %}{% endblock content %}
+  <!-- +++++++++++++++++++++++++++++pricing section  ++++++++++++++++++++++++++++++++++++++  -->
+  {% block pricing %} {% endblock pricing %}
+  <!-- ++++++++++++++++++++++++++++++++++ thanks Section ++++++++++++++++++++++++++++++++ -->
+  {% block thanks %} {% endblock thanks %}
+  <!-- ++++++++++++++++++++++++++++++++++ About Section ++++++++++++++++++++++++++++++++ -->
+  {% block about %}{% endblock about %}
+  <!-- ++++++++++++++++++++++++++++++++++ contact Section ++++++++++++++++++++++++++++++++ -->
+  {% block contact %}{% endblock contact %}
+  <!-- ++++++++++++++++++++++++++++++++++ gallery Section ++++++++++++++++++++++++++++++++ -->
+  {% block gallery %}{% endblock gallery %}
+  <!-- ++++++++++++++++++++++++++++++++++ login Section ++++++++++++++++++++++++++++++++ -->
+  {% block login_page %}{% endblock login_page %}
+
+  <div class="container-fluid" style="background-color: #181818;">
+    <footer class="py-4">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3" style="padding-left: 50px">
+          <h5 style="color: white; font-size: 30px">Useful Links</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary" style="color: white">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary" style="color: white">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary" style="color: white">Gallery</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary" style="color: white">About</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary" style="color: white">Contact</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-secondary" style="color: white">Visit Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 offset-md-1 mb-3">
+          <form method="POST" action={% url 'home' %}>
+            {% csrf_token %}
+            <h5 style="color: white">Subscribe to our newsletter</h5>
+            <p style="color: white">
+              Signup for offers, sneak-peeks, updates and more
+            </p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="email" class="form-control" placeholder="Email address" name="email"
+                id="email" required />
+              <button class="submit"
+                style="background-color: #99ff00; padding: 10px; border: none; border-radius: 20px; color: white;">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-3" style="padding-right: 30px">
+          <h5 style="color: white; font-size: 30px">Contact Us</h5>
+          <p style="color: white">
+            If you’re interested in reserving your spot at Vier Node, give us
+            a call and we’d be happy to show you around.
+          </p>
+          <div style="color: white">
+            <p>
+              042-36821919 <br />viernodecospace@gmail.com <br />Ground Floor,
+              Shalimar Square, Shalimar Link Road, Lahore
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between border-top"
+        style="margin-top: 10px; padding-top: 20px">
+        <p style="color: white">
+          &copy; 2023 Vier Node|Co-Work Space, Inc. All rights reserved.
+        </p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="#" class="link-body-emphasis">
+              <i class="fa-brands fa-facebook" style="color: #99ff00; font-size: 30px; margin-right: 10px"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="#" class="link-body-emphasis">
+              <i class="fa-brands fa-square-instagram" style="color: #99ff00; font-size: 30px; margin-right: 10px"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="#" class="link-body-emphasis">
+              <i class="fa-brands fa-twitter" style="color: #99ff00; font-size: 30px; margin-right: 10px"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
